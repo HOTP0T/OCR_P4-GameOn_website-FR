@@ -96,4 +96,3 @@ function validateInput() {
 //       return true;
 //   }
 // }
-//rajout de commentaire pour test push
