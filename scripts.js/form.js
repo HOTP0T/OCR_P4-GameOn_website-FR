@@ -43,10 +43,10 @@ function validateInput() {
     console.log("Please select Birth Date");
   }
   // check location radiobuttons
-  else if (location.length === 0){
+  else if (location.length === 0) {
     alert("Please select at least one location");
     console.log("Please select at least one location");
-}
+  }
   // check tournament quantity
   else if (tourQuantity == "") {
     alert("Please enter a number");
@@ -96,3 +96,4 @@ function validateInput() {
 //       return true;
 //   }
 // }
+//rajout de commentaire pour test push
