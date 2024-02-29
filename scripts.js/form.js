@@ -71,28 +71,4 @@ function validateInput() {
   }
 }
 
-// {
-//   // decalration des variables
-//   var firstName = document.getElementById("first").value;
-//   var lastName = document.getElementById("last").value;
-//   var email = document.getElementById("email").value;
-//   var DoB = document.getElementById("birthdate").value;
-//   var quantity = document.getElementById("quantity").value;
-//   var location = document.getElementById("formData").value; // TODO : à revoir
-//   var checkbox = document.getElementById("checkbox1").checked;
-//   var checkbox2 = document.getElementById("checkbox2").checked;
-//   // var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-//   if(firstName.length < 2 || lastName.length < 2 || (email.length < 2 || email != /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/) || checkbox == false || checkbox2 == false)
-
-//   DoB.length < 2 || quantity.length < 2 || location.length < 2
-
-//   {
-//       alert("There is an issue in your form! Please check the following: \n- First name and last name should be at least 2 characters long \n- Email should be valid \n- You must select at least one location \n- You must accept the terms of use \n- You must accept the privacy policy");
-//       // console log for testing purposes
-//       console.log("There is an issue in your form! Please check the following: \n- First name and last name should be at least 2 characters long \n- Email should be valid \n- You must select at least one location \n- You must accept the terms of use \n- You must accept the privacy policy");
-//       return false;
-//   } else {
-//       return true;
-//   }
-// }
