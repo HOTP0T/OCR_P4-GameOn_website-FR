@@ -17,8 +17,8 @@ function validateInput() {
 
   // check first name
   if (fname == "" || fname.length < 2 || fname.search(/^[a-zA-Z]+$/) == -1) {
-    alert("Please Enter First Name");
-    console.log("Please Enter First Name");
+    alert("Veuillez entrer 2 caractères ou plus pour le champ du nom.");
+    console.log("Veuillez entrer 2 caractères ou plus pour le champ du nom.");
   }
   // check last name
   else if (
@@ -26,25 +26,25 @@ function validateInput() {
     lname.length < 2 ||
     lname.search(/^[a-zA-Z]+$/) == -1
   ) {
-    alert("Please Enter Last Name");
-    console.log("Please Enter Last Name");
+    alert("Veuillez entrer 2 caractères ou plus pour le champ du nom.");
+    console.log("Veuillez entrer 2 caractères ou plus pour le champ du nom.");
   }
   //check email
   else if (email == "") {
-    alert("Please Enter Email");
+    alert("Veuillez entrer une adresse email valide.");
     console.log("Please Enter Email");
   } else if (email.search(emailRegEx) == -1) {
-    alert("Please enter a valid email address.");
+    alert("Veuillez entrer une adresse email valide.");
     console.log("Please enter a valid email address.");
   }
   // check birthdate
   else if (!birthday) {
-    alert("Please select Birth Date");
+    alert("Vous devez entrer votre date de naissance.");
     console.log("Please select Birth Date");
   }
   // check location radiobuttons
   else if (location.length === 0) {
-    alert("Please select at least one location");
+    alert("Vous devez choisir une option.");
     console.log("Please select at least one location");
   }
   // check tournament quantity
