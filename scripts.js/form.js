@@ -1,4 +1,4 @@
-// empeche le default behaviour du formulaire lors du submit en cas derreur -> il nbe refraichit pas la page
+// empeche le default behaviour du formulaire lors du submit en cas derreur -> il ne refraichit pas la page
 let formulaire = document.getElementById("formulaire");
 formulaire.addEventListener("submit", function (e) {
   e.preventDefault();
