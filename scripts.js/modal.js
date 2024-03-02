@@ -1,3 +1,4 @@
+//fonction pour la reponsivness
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -15,7 +16,6 @@ const closeForm = document.querySelector(".close");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
 
 // launch modal form
 function launchModal() {
