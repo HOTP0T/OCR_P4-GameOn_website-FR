@@ -67,8 +67,6 @@ function validateInput() {
   else {
     alert("Form Submitted Successfully");
     console.log("Form Submitted Successfully");
-    closeModal();
+    launchValidation();
   }
 }
-
-
