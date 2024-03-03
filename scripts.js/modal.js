@@ -24,7 +24,7 @@ function launchModal() {
 }
 
 function launchValidation() {
-  formData.style.display = "none";
+  formData.forEach((data) => (data.style.display = "none"));
   closeValidation.style.display = "block";
 }
 
