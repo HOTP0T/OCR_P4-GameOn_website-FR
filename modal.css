@@ -188,6 +188,7 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+  min-height: 75vh;
 }
 
 label {
@@ -326,7 +327,8 @@ input[data-error]::after {
 }
 .btn-submit,
 .btn-signup,
-.btn-close-form {
+.btn-close-form,
+.button {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -533,4 +535,23 @@ footer {
 
 .fenetreFermeture {
   display: none;
+
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  flex-direction: column;
+  
+  margin-top: 33.3%;
 }
+
+.btn-close-form {
+margin-top: 65%;
+}
+
+/* .fermetureContainer {
+  display: flex;
+  height: 100%;
+} */
