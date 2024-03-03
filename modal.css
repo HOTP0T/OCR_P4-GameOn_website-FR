@@ -14,7 +14,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background-image: url("background.png");
+  /* background-image: url("background.png"); */
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
@@ -543,12 +543,12 @@ footer {
   align-self: center;
   align-content: center;
   flex-direction: column;
-  
+
   margin-top: 33.3%;
 }
 
 .btn-close-form {
-margin-top: 65%;
+  margin-top: 65%;
 }
 
 /* .fermetureContainer {
