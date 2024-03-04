@@ -16,10 +16,11 @@ body {
   flex-direction: column;
   /* background-image: url("background.png"); */
   font-family: var(--font-default);
-  font-size: 18px;
+  /* font-size: 18px; */
   max-width: 1300px;
   margin: 0 auto;
 }
+
 
 p {
   margin-bottom: 0;
@@ -411,7 +412,7 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 93vh;
+  /* min-height: 93vh; */
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
