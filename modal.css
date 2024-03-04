@@ -189,7 +189,7 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
-  min-height: 75vh;
+  height: 100%;
 }
 
 label {

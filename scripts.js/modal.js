@@ -34,7 +34,7 @@ function launchValidation() {
 // close modal function
 function closeModal() {
   modalbg.style.display = "none";
-  closeValidation.forEach((data) => (data.style.display = "none"));
+  closeValidation.forEach((data) => (data.style.display = "flex"));
 }
 // close modal event
 closeForm.addEventListener("click", closeModal);
