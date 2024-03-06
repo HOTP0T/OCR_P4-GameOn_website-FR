@@ -21,7 +21,6 @@ body {
   margin: 0 auto;
 }
 
-
 p {
   margin-bottom: 0;
   padding: 0.5vw;
@@ -41,6 +40,7 @@ img {
 .main-navbar {
   float: right;
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -69,6 +69,12 @@ img {
   display: none;
 }
 
+.error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+}
+
 @media screen and (max-width: 768px) {
   .topnav a {
     display: none;
@@ -77,6 +83,7 @@ img {
     float: right;
     display: block;
   }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -443,7 +450,7 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
+  font-size: 6vw;
   font-weight: normal;
   white-space: nowrap;
 }
@@ -556,3 +563,4 @@ footer {
   display: flex;
   height: 100%;
 } */
+

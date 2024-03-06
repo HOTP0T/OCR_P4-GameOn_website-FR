@@ -65,6 +65,7 @@
               <div
                 class="formData">
                 <label for="first">Prénom</label><br>
+                
 
                 <input
                   class="text-control"
@@ -72,7 +73,8 @@
                   id="first"
                   name="first"
                   minlength="2"
-                /><br>
+                />
+                <span class="error errorFirst">"Error Message"</span>
               </div>
               <div
                 class="formData">
@@ -83,7 +85,8 @@
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                />
+                <span class="error errorLast">"Error Message"</span>
               </div>
               <div
                 class="formData">
@@ -94,7 +97,8 @@
                   type="email"
                   id="email"
                   name="email"
-                /><br>
+                />
+                <span class="error errorEmail">"Error Message"</span>
               </div>
               <div
                 class="formData">
@@ -105,17 +109,20 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                /><br>
+                />
+                <span class="error errorBOD
+                ">"Error Message"</span>
               </div>
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
 
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <span class="error errorQuantity">"Error Message"</span>
               </div>
               <p class="text-label formData">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
-                class="formData">
+                class="formData locationRadio">
 
                 <input
                   class="checkbox-input"
@@ -195,7 +202,7 @@
                   Portland</label
                 >
               </div>
-
+<span class="error errorLocation">"Error Message"</span>
               <div
                 class="formData">
 
