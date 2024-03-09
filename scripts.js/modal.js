@@ -15,6 +15,7 @@ const formData = document.querySelectorAll(".formData");
 const closeForm = document.querySelector(".close");
 const closeValidation = document.querySelectorAll(".fenetreFermeture");
 const buttonValidation = document.querySelector(".btn-close-form");
+const validInputs = document.querySelectorAll(".error");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -27,7 +28,8 @@ function launchModal() {
 function launchValidation() {
   formData.forEach((data) => (data.style.display = "none"));
   closeValidation.forEach((data) => (data.style.display = "flex"));
-  // closeValidation.style.display = "block";
+  // hides error messages
+  // validInputs.forEach((data) => (data.style.display = "none"));
 }
 
 // CLOSING THE FORM
