@@ -69,6 +69,15 @@ img {
   display: none;
 }
 
+input:invalid {
+  border: 2px solid #e54858;
+
+}
+
+input:invalid + span.error {
+  display: block;
+}
+
 .error {
   display: none;
   color: red;
@@ -219,7 +228,9 @@ input {
   height: 48px;
 }
 
-.formData[data-error]::after {
+
+
+/* .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
   color: #e54858;
@@ -236,7 +247,7 @@ input {
 }
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
-}
+} */
 
 /* input[data-error]::after {
     content: attr(data-error);

@@ -85,6 +85,7 @@
                   type="text"
                   id="last"
                   name="last"
+                  minlength="2"
                 />
                 <span class="error errorLast">"Error Message"</span>
               </div>
@@ -97,6 +98,7 @@
                   type="email"
                   id="email"
                   name="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 />
                 <span class="error errorEmail">"Error Message"</span>
               </div>
@@ -109,6 +111,7 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
+                  pattern="\d{2}-\d{2}-\d{4}"
                 />
                 <span class="error errorBOD
                 ">"Error Message"</span>
