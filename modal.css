@@ -69,19 +69,10 @@ img {
   display: none;
 }
 
-input:invalid {
-  border: 2px solid #e54858;
-
-}
-
-input:invalid + span.error {
-  display: block;
-}
-
 .error {
   display: none;
   color: red;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 @media screen and (max-width: 1107px) {
@@ -227,8 +218,6 @@ input {
   font-size: 20px;
   height: 48px;
 }
-
-
 
 /* .formData[data-error]::after {
   content: attr(data-error);

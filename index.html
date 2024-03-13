@@ -72,9 +72,9 @@
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"
+                  pattern="^[ a-zA-Z\-\']+$"
                 />
-                <span class="error errorFirst">"Error Message"</span>
+                <span class="error errorFirst">Veuillez entrer 2 caractères ou plus pour le champ du prénom.</span>
               </div>
               <div
                 class="formData">
@@ -85,9 +85,8 @@
                   type="text"
                   id="last"
                   name="last"
-                  minlength="2"
                 />
-                <span class="error errorLast">"Error Message"</span>
+                <span class="error errorLast">Veuillez entrer 2 caractères ou plus pour le champ du nom.</span>
               </div>
               <div
                 class="formData">
@@ -100,7 +99,7 @@
                   name="email"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 />
-                <span class="error errorEmail">"Error Message"</span>
+                <span class="error errorEmail">Veuillez entrer une adresse mail valide.</span>
               </div>
               <div
                 class="formData">
@@ -114,14 +113,14 @@
                   pattern="\d{2}-\d{2}-\d{4}"
                 />
                 <span class="error errorBOD
-                ">"Error Message"</span>
+                ">Vous devez entrer votre date de naissance.</span>
               </div>
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
 
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
-                <span class="error errorQuantity">"Error Message"</span>
+                <span class="error errorQuantity">Ne laissez pas ce champ vide.</span>
               </div>
               <p class="text-label formData">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -205,7 +204,7 @@
                   Portland</label
                 >
               </div>
-<span class="error errorLocation">"Error Message"</span>
+<span class="error errorLocation" id="errorLoca">Vous devez choisir une option.</span>
               <div
                 class="formData">
 
@@ -221,6 +220,7 @@
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
+                <span class="error errorCheckbox" id="errorCheckbox">Vous devez vérifier que vous acceptez les termes et conditions.</span>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
 
                 <label class="checkbox2-label" for="checkbox2">
