@@ -593,7 +593,6 @@ footer {
     font-size: 14px;
   }
   }
-}
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -637,9 +636,6 @@ footer {
   img {
     max-width: 85%;
     height: auto;
-  }
-  .hero-img {
-    ;
   }
 
   h1.hero-headline {
