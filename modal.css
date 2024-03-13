@@ -108,7 +108,7 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
+    /* margin-top: -15px; */
   }
 }
 
@@ -433,7 +433,7 @@ input {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  /* min-width: 424px; */
 }
 .hero-content::after {
   content: "";
@@ -570,7 +570,135 @@ footer {
   margin-top: 65%;
 }
 
-/* .fermetureContainer {
-  display: flex;
-  height: 100%;
+/* Default styles template if needed
+
+/* Header styles */
+/* .header {
+
 } */
+
+/* Main content styles */
+/* .main-content {
+
+} */
+
+/* Footer styles */
+/* .footer {
+
+} */
+
+
+@media only screen and (min-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+  /* Adjust font sizes and other styles for large devices */
+  /* For example: */
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media only screen and (min-width: 1440px) {
+  /* Adjust font sizes and other styles for extra large devices */
+  /* For example: */
+  body {
+    font-size: 20px;
+  }
+}
+
+/* CSS for smoother mobile experience */
+
+/* Adjust font size and spacing for better readability on small screens */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .container {
+    padding: 20px;
+  }
+  .header, .footer {
+    text-align: center;
+  }
+  img {
+    max-width: 85%;
+    height: auto;
+  }
+  .hero-img {
+    ;
+  }
+
+  h1.hero-headline {
+    font-size: 3.5rem;
+    line-height: normal;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+  .topnav img {
+    max-width: 87%;
+  }
+  .topnav a.icon {
+    margin-top: -40px;
+  }
+  .topnav.responsive .icon {
+    margin-top: 0px;
+  }
+  /* Adjust margins and paddings for smaller screens */
+  .container {
+    padding: 10px;
+  }
+
+  /* Adjust layout for smaller screens */
+  .header, .footer {
+    text-align: center;
+  }
+
+  /* Adjust image sizes for smaller screens */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust h1 font size for smaller screens */
+  .hero-headline {
+    font-size: 24px; /* Adjust the size as needed */
+    margin-bottom: 10px; /* Add margin to separate from the paragraph */
+    
+  }
+
+  /* Adjust p font size for smaller screens */
+  .hero-text {
+    font-size: 16px; /* Adjust the size as needed */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-text,
+    .hero-img {
+    text-align: left; /* Center the text */
+    margin-top: 20px; /* Adjust the top margin as needed */
+    display: flex;
+justify-content: center; 
+  }
+ {
+
+  }
+}
