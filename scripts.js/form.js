@@ -1,8 +1,9 @@
+//Lors du click de submit
 document
   .querySelector("#formulaire")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-
+    // je declare autant de variables que de champs a verifier ainsi qu'aucune erreur by default
     var errors = false;
 
     var first = document.querySelector("#first");
@@ -14,6 +15,10 @@ document
     var locationChecked = false;
     var termsCheckbox = document.querySelector("#checkbox1");
 
+    // je verifie chaque champ et affiche un message derreur si necessaire
+    // si le champ est valide, je cache le message derreur
+
+    // check first name
     if (first.value.trim().length < 2) {
       document.querySelector(".errorFirst").style.display = "inline";
       errors = true;
@@ -21,6 +26,7 @@ document
       document.querySelector(".errorFirst").style.display = "none";
     }
 
+    // check last name
     if (last.value.trim().length < 2) {
       document.querySelector(".errorLast").style.display = "inline";
       errors = true;
@@ -28,6 +34,7 @@ document
       document.querySelector(".errorLast").style.display = "none";
     }
 
+    //check email
     if (email.value.trim().length < 2 || !email.validity.valid) {
       document.querySelector(".errorEmail").style.display = "inline";
       errors = true;
@@ -35,6 +42,7 @@ document
       document.querySelector(".errorEmail").style.display = "none";
     }
 
+    // check birthdate
     if (birthdate.value.trim().length < 2) {
       document.querySelector(".errorBOD").style.display = "inline";
       errors = true;
@@ -42,6 +50,7 @@ document
       document.querySelector(".errorBOD").style.display = "none";
     }
 
+    // check tournament quantity
     if (
       quantity.value.trim().length < 1 ||
       isNaN(quantity.value) ||
@@ -54,6 +63,7 @@ document
       document.querySelector(".errorQuantity").style.display = "none";
     }
 
+    // check location radiobuttons
     for (var i = 0; i < location.length; i++) {
       if (location[i].checked) {
         locationChecked = true;
@@ -67,17 +77,20 @@ document
       document.querySelector(".errorLocation").style.display = "none";
     }
 
-if (!termsCheckbox.checked) {
-  document.querySelector(".errorCheckbox").style.display = "block";
-  errors = true;
-} else {
-  document.querySelector(".errorCheckbox").style.display = "none";
-}
+    // check terms of use
+    if (!termsCheckbox.checked) {
+      document.querySelector(".errorCheckbox").style.display = "block";
+      errors = true;
+    } else {
+      document.querySelector(".errorCheckbox").style.display = "none";
+    }
 
+    // si aucune erreur, je lance la validation avec la fonction launchValidation (qui cache le formulaire et affiche le message de validation)
     if (!errors) {
       launchValidation();
     }
 
+    // je retourne si il y a des erreurs ou non
     return !errors;
   });
 
