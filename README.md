@@ -2,7 +2,7 @@
 
 Projet n°4 du parcours javascript-React chez OpenClassrooms. L'objectif est de poursuivre un projet de création d’un formulaire d’inscription à des concours de jeux vidéos (voir les [maquettes Figma](https://www.figma.com/file/B7NKBDvSI18uoMLJgpnh48/UI-Design-GameOn-FR?node-id=106%3A630) ).
 
-![Capture d'écran des maquettes](ScreenShotMaquettes.png "Maquette Projet4 GameOn")
+![Capture d'écran des maquettes](ScreenShotMaquettes.png =100x230 "Maquette Projet4 GameOn")
 
 ### Spécifications techniques du projet
 
