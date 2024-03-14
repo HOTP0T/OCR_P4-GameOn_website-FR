@@ -71,7 +71,7 @@ img {
 
 .error {
   display: none;
-  color: red;
+  color: #ff4e60;
   font-size: 0.85rem;
 }
 
@@ -93,6 +93,7 @@ img {
     position: absolute;
     right: 0;
     top: 0;
+    margin-top: 5px;
   }
   .topnav.responsive a {
     float: none;
@@ -108,7 +109,16 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    /* margin-top: -15px; */
+    margin-top: -10px;
+  }
+    .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5px;
+  }
+  .main-navbar {
+    margin-top: 15px;
   }
 }
 
@@ -656,6 +666,17 @@ footer {
   }
   .topnav.responsive .icon {
     margin-top: 0px;
+  }
+    .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -55px;
+  }
+    .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5px;
   }
   /* Adjust margins and paddings for smaller screens */
   .container {
