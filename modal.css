@@ -75,7 +75,7 @@ img {
   font-size: 0.85rem;
 }
 
-@media screen and (max-width: 1107px) {
+@media screen and (max-width: 1125px) {
   .topnav a {
     display: none;
   }
@@ -85,7 +85,7 @@ img {
   }
 }
 
-@media screen and (max-width: 1107px) {
+@media screen and (max-width: 1125px) {
   .topnav.responsive {
     position: relative;
   }
