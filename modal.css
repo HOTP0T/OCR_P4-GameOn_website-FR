@@ -587,12 +587,11 @@ footer {
 
 } */
 
-
 @media only screen and (min-width: 320px) {
   body {
     font-size: 14px;
   }
-  }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -630,7 +629,8 @@ footer {
   .container {
     padding: 20px;
   }
-  .header, .footer {
+  .header,
+  .footer {
     text-align: center;
   }
   img {
@@ -663,7 +663,8 @@ footer {
   }
 
   /* Adjust layout for smaller screens */
-  .header, .footer {
+  .header,
+  .footer {
     text-align: center;
   }
 
@@ -677,7 +678,6 @@ footer {
   .hero-headline {
     font-size: 24px; /* Adjust the size as needed */
     margin-bottom: 10px; /* Add margin to separate from the paragraph */
-    
   }
 
   /* Adjust p font size for smaller screens */
@@ -688,10 +688,10 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .hero-text,
-    .hero-img {
+  .hero-img {
     text-align: left; /* Center the text */
     margin-top: 20px; /* Adjust the top margin as needed */
     display: flex;
-justify-content: center; 
+    justify-content: center;
   }
 }
