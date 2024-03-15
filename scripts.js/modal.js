@@ -16,6 +16,7 @@ const closeForm = document.querySelector(".close");
 const closeValidation = document.querySelectorAll(".fenetreFermeture");
 const buttonValidation = document.querySelector(".btn-close-form");
 const validInputs = document.querySelectorAll(".error");
+const navBurger = document.querySelector(".main-navbar");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -23,6 +24,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  navBurger.style.zIndex = "1";
 }
 
 function launchValidation() {
