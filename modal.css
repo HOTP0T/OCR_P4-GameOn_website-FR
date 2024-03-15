@@ -37,6 +37,9 @@ img {
 .header-logo {
   float: left;
 }
+.header-logo img {
+  padding-top: 15px;
+}
 .main-navbar {
   float: right;
 }
@@ -93,7 +96,6 @@ img {
     position: absolute;
     right: 0;
     top: 0;
-    margin-top: 5px;
   }
   .topnav.responsive a {
     float: none;
@@ -109,16 +111,15 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -10px;
+    /* margin-right: 10px; */
   }
-    .topnav.responsive .icon {
-    position: absolute;
+  .topnav.responsive .icon,
+  .topnav .icon {
     right: 0;
-    top: 0;
-    margin-top: 5px;
+    /* margin-top: 5px; */
   }
+
   .main-navbar {
-    margin-top: 15px;
   }
 }
 
@@ -667,12 +668,12 @@ footer {
   .topnav.responsive .icon {
     margin-top: 0px;
   }
-    .topnav a.icon {
+  .topnav a.icon {
     float: right;
     display: block;
     margin-top: -55px;
   }
-    .topnav.responsive .icon {
+  .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
