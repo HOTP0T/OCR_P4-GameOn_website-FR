@@ -103,7 +103,7 @@ img {
     display: none;
   }
 
-  .main-navbar {
+  .topnav.responsive .main-navbar {
     position: fixed;
     right: 0;
     background: #fff;
