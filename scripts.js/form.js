@@ -8,6 +8,7 @@ document
 
     var regexNames =
       /^[a-zA-Z\xC0-\uFFFF]+([ \-']{0,1}[a-zA-Z\xC0-\uFFFF]+){0,2}[.]{0,1}$/;
+    var regexNum = /^(?:[0-9]|[1-8][0-9]|9[0-9]?)$/;
 
     var first = document.querySelector("#first");
     var last = document.querySelector("#last");
@@ -58,7 +59,7 @@ document
       quantity.value.trim().length < 1 ||
       isNaN(quantity.value) ||
       quantity.value < 0 ||
-      quantity.value > 99
+      quantity.value > 99 || !regexNum.test(quantity.value)
     ) {
       document.querySelector(".errorQuantity").style.display = "inline";
       errors = true;
