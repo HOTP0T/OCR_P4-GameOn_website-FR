@@ -44,8 +44,7 @@ img {
   float: right;
 }
 
-.topnav a,
-.topnav.responsive a {
+.topnav a {
   float: left;
   display: block;
   color: #000000;
@@ -55,14 +54,10 @@ img {
   text-decoration: none;
   font-size: 20px;
   font-family: Roboto, sans-serif;
-}
-
-.topnav a:hover {
-  background-color: #ff0000;
-  color: #ffffff;
   border-radius: 15px;
 }
 
+.topnav a:hover,
 .topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
@@ -80,50 +75,58 @@ img {
 }
 
 @media screen and (max-width: 1125px) {
+  /* shows burger menu */
   .topnav .icon {
     display: block;
   }
-
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-right: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
+  /* hides big screen navbar menu */
   .topnav a {
     display: none;
   }
 
+  /* .topnav.responsive {
+    position: relative;
+  } */
+
+  /* .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  } */
+
+  /* .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  } */
+
+  /* positions the navbar on top of other elements when opened */
   .topnav.responsive .main-navbar {
     position: fixed;
     right: 0;
     background: #fff;
     z-index: 12;
-    margin-right: 42px;
+    margin-right: 36px;
     border-radius: 5px;
   }
+  /* positions/sticks the navbar on top with logo when opened */
+  .topnav .main-navbar {
+    position: absolute;
+    right: 0;
+    background: #fff;
+    z-index: 12;
+    margin-right: 36px;
+    border-radius: 5px;
+  }
+
   .topnav.responsive .main-navbar {
     box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
   }
-  .topnav a {
-    display: none;
-  }
-  .topnav a.icon {
+
+  /* .topnav a.icon {
     float: right;
     display: block;
-    margin-right: 3px;
-  }
+  } */
 }
 
 @media screen and (max-width: 1125px) {
@@ -714,6 +717,7 @@ footer {
     top: 0;
     margin-top: 5px;
   }
+
   /* Adjust margins and paddings for smaller screens */
   .container {
     padding: 10px;
@@ -733,21 +737,20 @@ footer {
 
   /* Adjust h1 font size for smaller screens */
   .hero-headline {
-    font-size: 24px; /* Adjust the size as needed */
-    margin-bottom: 10px; /* Add margin to separate from the paragraph */
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
-  /* Adjust p font size for smaller screens */
   .hero-text {
-    font-size: 16px; /* Adjust the size as needed */
+    font-size: 16px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .hero-text,
   .hero-img {
-    text-align: left; /* Center the text */
-    margin-top: 20px; /* Adjust the top margin as needed */
+    text-align: left;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
   }

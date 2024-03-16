@@ -38,7 +38,9 @@ function launchValidation() {
 // close modal function
 function closeModal() {
   modalbg.style.display = "none";
-  closeValidation.forEach((data) => (data.style.display = "flex"));
+
+  // shouldnt put this here because it will show the validation message even if form is invalid but user clicks on X
+  // closeValidation.forEach((data) => (data.style.display = "flex"));
 }
 // close modal event
 closeForm.addEventListener("click", closeModal);
