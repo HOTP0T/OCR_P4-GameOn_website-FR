@@ -24,7 +24,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
-  navBurger.style.zIndex = "1";
+  navBurger.style.display = "none";
 }
 
 function launchValidation() {
@@ -38,6 +38,7 @@ function launchValidation() {
 // close modal function
 function closeModal() {
   modalbg.style.display = "none";
+  navBurger.style.display = "block";
 
   // shouldnt put this here because it will show the validation message even if form is invalid but user clicks on X
   // closeValidation.forEach((data) => (data.style.display = "flex"));
