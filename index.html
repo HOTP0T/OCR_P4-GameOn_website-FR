@@ -17,8 +17,22 @@
   <body>
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-        <img alt="logo" src="./Assets/Logo.png" width="auto" height="auto" class="logo-big" />
-        <img alt="logo" src="./Assets/Logo-small.png" width="auto" height="auto" class="logo-small" />
+        <!-- version normal du logo -->
+        <img
+          alt="logo"
+          src="./Assets/Logo.png"
+          width="auto"
+          height="auto"
+          class="logo-big"
+        />
+        <!-- version small viewport du logo -->
+        <img
+          alt="logo"
+          src="./Assets/Logo-small.png"
+          width="auto"
+          height="auto"
+          class="logo-small"
+        />
       </div>
       <div class="main-navbar">
         <a href="#" class="active"><span>Accueil</span></a>
@@ -26,6 +40,7 @@
         <a href="#"><span>À propos</span></a>
         <a href="#"><span>Contact</span></a>
         <a href="#"><span>Évènements passés</span></a>
+        <!-- element handled par js pour toggle le burger menu -->
         <a href="javascript:void(0);" class="icon" onclick="editNav()">
           <i class="fa fa-bars"></i>
         </a>
@@ -112,11 +127,7 @@
                   ?</label
                 ><br />
 
-                <input
-                  class="text-control"
-                  id="quantity"
-                  name="quantity"
-                />
+                <input class="text-control" id="quantity" name="quantity" />
                 <span class="error errorQuantity"
                   >Veuillez entrer un chiffre entre 0 et 99.</span
                 >

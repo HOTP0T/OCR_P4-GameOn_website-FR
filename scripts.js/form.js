@@ -2,14 +2,19 @@
 document
   .querySelector("#formulaire")
   .addEventListener("submit", function (event) {
+    // empeche le default behaviour du formulaire lors du submit en cas derreur -> il ne refraichit pas la page
     event.preventDefault();
     // je declare autant de variables que de champs a verifier ainsi qu'aucune erreur by default
+
+    // valeur initial de errors est false
     var errors = false;
 
+    // declaration des differents regex utiliser pour verifier les champs du formulaire
     var regexNames =
       /^[a-zA-Z\xC0-\uFFFF]+([ \-']{0,1}[a-zA-Z\xC0-\uFFFF]+){0,2}[.]{0,1}$/;
     var regexNum = /^(?:[0-9]|[1-8][0-9]|9[0-9]?)$/;
 
+    // je declare les variables pour chaque champ du formulaire
     var first = document.querySelector("#first");
     var last = document.querySelector("#last");
     var email = document.querySelector("#email");
@@ -59,7 +64,8 @@ document
       quantity.value.trim().length < 1 ||
       isNaN(quantity.value) ||
       quantity.value < 0 ||
-      quantity.value > 99 || !regexNum.test(quantity.value)
+      quantity.value > 99 ||
+      !regexNum.test(quantity.value)
     ) {
       document.querySelector(".errorQuantity").style.display = "inline";
       errors = true;

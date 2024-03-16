@@ -1,4 +1,4 @@
-//fonction pour la reponsivness
+//fonction pour l'interaction du menu topnav
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
