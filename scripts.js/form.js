@@ -6,6 +6,9 @@ document
     // je declare autant de variables que de champs a verifier ainsi qu'aucune erreur by default
     var errors = false;
 
+    var regexNames =
+      /^[a-zA-Z\xC0-\uFFFF]+([ \-']{0,1}[a-zA-Z\xC0-\uFFFF]+){0,2}[.]{0,1}$/;
+
     var first = document.querySelector("#first");
     var last = document.querySelector("#last");
     var email = document.querySelector("#email");
@@ -19,7 +22,7 @@ document
     // si le champ est valide, je cache le message derreur
 
     // check first name
-    if (first.value.trim().length < 2) {
+    if (first.value.trim().length < 2 || !regexNames.test(first.value.trim())) {
       document.querySelector(".errorFirst").style.display = "inline";
       errors = true;
     } else {
@@ -27,7 +30,7 @@ document
     }
 
     // check last name
-    if (last.value.trim().length < 2) {
+    if (last.value.trim().length < 2 || !regexNames.test(last.value.trim())) {
       document.querySelector(".errorLast").style.display = "inline";
       errors = true;
     } else {
