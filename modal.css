@@ -44,7 +44,8 @@ img {
   float: right;
 }
 
-.topnav a {
+.topnav a,
+.topnav.responsive a {
   float: left;
   display: block;
   color: #000000;
@@ -91,6 +92,7 @@ img {
     position: absolute;
     right: 0;
     top: 0;
+    margin-right: 0;
   }
 
   .topnav.responsive a {
@@ -108,7 +110,7 @@ img {
     right: 0;
     background: #fff;
     z-index: 12;
-    margin-right: 36px;
+    margin-right: 42px;
     border-radius: 5px;
   }
   .topnav.responsive .main-navbar {
@@ -120,6 +122,7 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
+    margin-right: 3px;
   }
 }
 
