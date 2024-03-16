@@ -18,21 +18,9 @@
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
         <!-- version normal du logo -->
-        <img
-          alt="logo"
-          src="./Assets/Logo.png"
-          width="auto"
-          height="auto"
-          class="logo-big"
-        />
+        <img alt="logo" src="./Assets/Logo.png" class="logo-big" />
         <!-- version small viewport du logo -->
-        <img
-          alt="logo"
-          src="./Assets/Logo-small.png"
-          width="auto"
-          height="auto"
-          class="logo-small"
-        />
+        <img alt="logo" src="./Assets/Logo-small.png" class="logo-small" />
       </div>
       <div class="main-navbar">
         <a href="#" class="active"><span>Accueil</span></a>
@@ -115,7 +103,6 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                  pattern="\d{2}-\d{2}-\d{4}"
                 />
                 <span class="error errorBOD"
                   >Vous devez entrer votre date de naissance.</span
@@ -224,7 +211,7 @@
                   checked
                 />
 
-                <label class="checkbox2-label" for="checkbox1" required>
+                <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
@@ -242,9 +229,8 @@
                 <br />
               </div>
               <input
-                class="btn-submit formData"
+                class="btn-submit formData button-submit"
                 type="submit"
-                class="button"
                 value="C'est parti"
               />
             </form>
@@ -256,9 +242,8 @@
               </p>
               <!-- boutton pour fermer la fenetre -->
               <button
-                class="fenetreFermeture btn-close-form"
+                class="fenetreFermeture button btn-close-form"
                 type="button"
-                class="button"
                 value="Fermer"
               >
                 Fermer

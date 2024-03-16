@@ -203,7 +203,8 @@ main {
 
 /* Modal form */
 
-.button {
+.button,
+.button-submit {
   background: #fe142f;
   margin-top: 0.5em;
   padding: 1em;
@@ -213,7 +214,8 @@ main {
   font-size: 16px;
 }
 
-.button:hover {
+.button:hover,
+.button-submit:hover {
   background: #3876ac;
 }
 
@@ -392,7 +394,8 @@ input {
 .btn-submit,
 .btn-signup,
 .btn-close-form,
-.button {
+.button,
+.button-submit {
   background: #fe142f;
   display: block;
   margin: 0 auto;
