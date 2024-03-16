@@ -13,6 +13,8 @@ document
     var regexNames =
       /^[a-zA-Z\xC0-\uFFFF]+([ \-']{0,1}[a-zA-Z\xC0-\uFFFF]+){0,2}[.]{0,1}$/;
     var regexNum = /^(?:[0-9]|[1-8][0-9]|9[0-9]?)$/;
+    var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var regexDOB = /(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})/;
 
     // je declare les variables pour chaque champ du formulaire
     var first = document.querySelector("#first");
@@ -44,7 +46,7 @@ document
     }
 
     //check email
-    if (email.value.trim().length < 2 || !email.validity.valid) {
+    if (email.value.trim().length < 2 || !email.validity.valid || !regexEmail.test(email.value)) {
       document.querySelector(".errorEmail").style.display = "inline";
       errors = true;
     } else {
@@ -52,7 +54,7 @@ document
     }
 
     // check birthdate
-    if (birthdate.value.trim().length < 2) {
+    if (birthdate.value.trim().length < 2 || !regexDOB.test(birthdate.value)) {
       document.querySelector(".errorBOD").style.display = "inline";
       errors = true;
     } else {
