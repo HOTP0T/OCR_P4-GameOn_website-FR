@@ -1,4 +1,4 @@
-//Lors du click de submit
+//Lors du click de submit du formulaire, on vérifie les champs et on affiche un message d'erreur si nécessaire
 document
   .querySelector("#formulaire")
   .addEventListener("submit", function (event) {
