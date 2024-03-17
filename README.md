@@ -8,8 +8,10 @@ Projet n°4 du parcours javascript-React chez OpenClassrooms. L'objectif est de 
 
 - Langages utilisés : HTML, CSS et Javascript
 
-- Validation au W3C
+- Validé au W3C
 
 - Compatible avec Chrome et Firefox
 
 - Desktop first puis s’adapte au format responsive
+
+
