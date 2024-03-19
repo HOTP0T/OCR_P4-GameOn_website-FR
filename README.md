@@ -20,4 +20,4 @@ _en cours_
 \
 [Presentation Snappify](https://snappify.com/view/261da17a-d97a-4c83-89cc-fd0d1bada365)
 
-<iframe width="1280" height="720" title="OCR-P4 presentation" src="https://snappify.com/embed/261da17a-d97a-4c83-89cc-fd0d1bada365?responsive=1&p=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#eee;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe>
+<iframe width="1280" height="720" src="https://snappify.com/embed/261da17a-d97a-4c83-89cc-fd0d1bada365?responsive=1&p=1&b=1"></iframe>
