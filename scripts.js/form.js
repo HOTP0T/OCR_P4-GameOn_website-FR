@@ -1,52 +1,45 @@
-//Lors du click de submit du formulaire, on vérifie les champs et on affiche un message d'erreur si nécessaire
-document
-  .querySelector("#formulaire")
-  .addEventListener("submit", function (event) {
-    // empeche le default behaviour du formulaire lors du submit en cas derreur -> il ne refraichit pas la page
-    event.preventDefault();
-    // je declare autant de variables que de champs a verifier ainsi qu'aucune erreur by default
+// V3
+// Lors du click de submit du formulaire, on vérifie les champs et on affiche un message d'erreur si nécessaire
+document.querySelector("#formulaire").addEventListener("submit", function (event) {
+  // empeche le default behaviour du formulaire lors du submit en cas derreur -> il ne refraichit pas la page
+  event.preventDefault();
 
-    // valeur initial de errors est false
-    var errors = false;
+  // je declare autant de variables que de champs a verifier ainsi qu'aucune erreur by default
+  var errors = false;
 
-    // declaration des differents regex utiliser pour verifier les champs du formulaire
-    var regexNames =
-      /^[a-zA-Z\xC0-\uFFFF]+([ \-']{0,1}[a-zA-Z\xC0-\uFFFF]+){0,2}[.]{0,1}$/;
-    var regexNum = /^(?:[0-9]|[1-8][0-9]|9[0-9]?)$/;
-    var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var regexDOB =
-      /(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})/;
+  // declaration des differents regex utiliser pour verifier les champs du formulaire
+  var regexNames =
+    /^[a-zA-Z\xC0-\uFFFF]+([ \-']{0,1}[a-zA-Z\xC0-\uFFFF]+){0,2}[.]{0,1}$/;
+  var regexNum = /^(?:[0-9]|[1-8][0-9]|9[0-9]?)$/;
+  var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var regexDOB =
+    /(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})/;
 
-    // je declare les variables pour chaque champ du formulaire
-    var first = document.querySelector("#first");
-    var last = document.querySelector("#last");
-    var email = document.querySelector("#email");
-    var birthdate = document.querySelector("#birthdate");
-    var quantity = document.querySelector("#quantity");
-    var location = document.querySelectorAll('input[name="location"]');
-    var locationChecked = false;
-    var termsCheckbox = document.querySelector("#checkbox1");
+  // je declare les variables pour chaque champ du formulaire
+  var first = document.querySelector("#first");
+  var last = document.querySelector("#last");
+  var email = document.querySelector("#email");
+  var birthdate = document.querySelector("#birthdate");
+  var quantity = document.querySelector("#quantity");
+  var location = document.querySelectorAll('input[name="location"]');
+  var locationChecked = false;
+  var termsCheckbox = document.querySelector("#checkbox1");
 
-    // je verifie chaque champ et affiche un message derreur si necessaire
-    // si le champ est valide, je cache le message derreur
+  // je verifie chaque champ et affiche un message derreur si necessaire
+  // si le champ est valide -> je cache le message derreur
 
-    // check first name
-    if (first.value.trim().length < 2 || !regexNames.test(first.value.trim())) {
-      document.querySelector(".errorFirst").style.display = "inline";
+  // Fonction de validation du prénom
+  function validateName(field, errorClass) {
+    if (field.value.trim().length < 2 || !regexNames.test(field.value.trim())) {
+      document.querySelector(errorClass).style.display = "inline";
       errors = true;
     } else {
-      document.querySelector(".errorFirst").style.display = "none";
+      document.querySelector(errorClass).style.display = "none";
     }
+  }
 
-    // check last name
-    if (last.value.trim().length < 2 || !regexNames.test(last.value.trim())) {
-      document.querySelector(".errorLast").style.display = "inline";
-      errors = true;
-    } else {
-      document.querySelector(".errorLast").style.display = "none";
-    }
-
-    //check email
+  // Fonction de validation de l'email
+  function validateEmail() {
     if (
       email.value.trim().length < 2 ||
       !email.validity.valid ||
@@ -57,16 +50,20 @@ document
     } else {
       document.querySelector(".errorEmail").style.display = "none";
     }
+  }
 
-    // check birthdate
+  // Fonction de validation de la date de naissance
+  function validateBirthdate() {
     if (birthdate.value.trim().length < 2 || !regexDOB.test(birthdate.value)) {
       document.querySelector(".errorBOD").style.display = "inline";
       errors = true;
     } else {
       document.querySelector(".errorBOD").style.display = "none";
     }
+  }
 
-    // check tournament quantity
+  // Fonction de validation de la quantité
+  function validateQuantity() {
     if (
       quantity.value.trim().length < 1 ||
       isNaN(quantity.value) ||
@@ -79,8 +76,10 @@ document
     } else {
       document.querySelector(".errorQuantity").style.display = "none";
     }
+  }
 
-    // check location radiobuttons
+  // Fonction de validation de la localisation
+  function validateLocation() {
     for (var i = 0; i < location.length; i++) {
       if (location[i].checked) {
         locationChecked = true;
@@ -93,24 +92,153 @@ document
     } else {
       document.querySelector(".errorLocation").style.display = "none";
     }
+  }
 
-    // check terms of use
+  // Fonction de validation de la case à cocher des T&Cs
+  function validateCheckbox() {
     if (!termsCheckbox.checked) {
       document.querySelector(".errorCheckbox").style.display = "block";
       errors = true;
     } else {
       document.querySelector(".errorCheckbox").style.display = "none";
     }
+  }
 
-    // si aucune erreur, je lance la validation avec la fonction launchValidation (qui cache le formulaire et affiche le message de validation)
-    if (!errors) {
-      launchValidation();
-    }
+  // Validation de chaque champ
+  validateName(first, ".errorFirst");
+  validateName(last, ".errorLast");
+  validateEmail();
+  validateBirthdate();
+  validateQuantity();
+  validateLocation();
+  validateCheckbox();
 
-    // je retourne si il y a des erreurs ou non
-    return !errors;
-  });
+  // si aucune erreur, je lance la validation avec la fonction launchValidation (qui cache le formulaire et affiche le message de validation)
+  if (!errors) {
+    launchValidation();
+  }
 
+  // je retourne si il y a des erreurs ou non
+  return !errors;
+});
+
+
+// V2
+// //Lors du click de submit du formulaire, on vérifie les champs et on affiche un message d'erreur si nécessaire
+// document
+//   .querySelector("#formulaire")
+//   .addEventListener("submit", function (event) {
+//     // empeche le default behaviour du formulaire lors du submit en cas derreur -> il ne refraichit pas la page
+//     event.preventDefault();
+//     // je declare autant de variables que de champs a verifier ainsi qu'aucune erreur by default
+
+//     // valeur initial de errors est false
+//     var errors = false;
+
+//     // declaration des differents regex utiliser pour verifier les champs du formulaire
+//     var regexNames =
+//       /^[a-zA-Z\xC0-\uFFFF]+([ \-']{0,1}[a-zA-Z\xC0-\uFFFF]+){0,2}[.]{0,1}$/;
+//     var regexNum = /^(?:[0-9]|[1-8][0-9]|9[0-9]?)$/;
+//     var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     var regexDOB =
+//       /(?:\d{1,2}[-/\s]\d{1,2}[-/\s]'?\d{2,4})|(?:\d{2,4}[-/\s]\d{1,2}[-/\s]\d{1,2})|(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)[\s-/,]*?\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*[-/,]?(?:\s)*'?\d{2,4})|(?:\d{1,2}(?:\s)*(?:rd|th|st)?(?:\s)*(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)(?:\s)*?[-/,]?(?:\s)*'?\d{2,4})/;
+
+//     // je declare les variables pour chaque champ du formulaire
+//     var first = document.querySelector("#first");
+//     var last = document.querySelector("#last");
+//     var email = document.querySelector("#email");
+//     var birthdate = document.querySelector("#birthdate");
+//     var quantity = document.querySelector("#quantity");
+//     var location = document.querySelectorAll('input[name="location"]');
+//     var locationChecked = false;
+//     var termsCheckbox = document.querySelector("#checkbox1");
+
+//     // je verifie chaque champ et affiche un message derreur si necessaire
+//     // si le champ est valide, je cache le message derreur
+
+//     // check first name
+//     if (first.value.trim().length < 2 || !regexNames.test(first.value.trim())) {
+//       document.querySelector(".errorFirst").style.display = "inline";
+//       errors = true;
+//     } else {
+//       document.querySelector(".errorFirst").style.display = "none";
+//     }
+
+//     // check last name
+//     if (last.value.trim().length < 2 || !regexNames.test(last.value.trim())) {
+//       document.querySelector(".errorLast").style.display = "inline";
+//       errors = true;
+//     } else {
+//       document.querySelector(".errorLast").style.display = "none";
+//     }
+
+//     //check email
+//     if (
+//       email.value.trim().length < 2 ||
+//       !email.validity.valid ||
+//       !regexEmail.test(email.value)
+//     ) {
+//       document.querySelector(".errorEmail").style.display = "inline";
+//       errors = true;
+//     } else {
+//       document.querySelector(".errorEmail").style.display = "none";
+//     }
+
+//     // check birthdate
+//     if (birthdate.value.trim().length < 2 || !regexDOB.test(birthdate.value)) {
+//       document.querySelector(".errorBOD").style.display = "inline";
+//       errors = true;
+//     } else {
+//       document.querySelector(".errorBOD").style.display = "none";
+//     }
+
+//     // check tournament quantity
+//     if (
+//       quantity.value.trim().length < 1 ||
+//       isNaN(quantity.value) ||
+//       quantity.value < 0 ||
+//       quantity.value > 99 ||
+//       !regexNum.test(quantity.value)
+//     ) {
+//       document.querySelector(".errorQuantity").style.display = "inline";
+//       errors = true;
+//     } else {
+//       document.querySelector(".errorQuantity").style.display = "none";
+//     }
+
+//     // check location radiobuttons
+//     for (var i = 0; i < location.length; i++) {
+//       if (location[i].checked) {
+//         locationChecked = true;
+//       }
+//     }
+
+//     if (!locationChecked) {
+//       document.querySelector(".errorLocation").style.display = "inline";
+//       errors = true;
+//     } else {
+//       document.querySelector(".errorLocation").style.display = "none";
+//     }
+
+//     // check terms of use
+//     if (!termsCheckbox.checked) {
+//       document.querySelector(".errorCheckbox").style.display = "block";
+//       errors = true;
+//     } else {
+//       document.querySelector(".errorCheckbox").style.display = "none";
+//     }
+
+//     // si aucune erreur, je lance la validation avec la fonction launchValidation (qui cache le formulaire et affiche le message de validation)
+//     if (!errors) {
+//       launchValidation();
+//     }
+
+//     // je retourne si il y a des erreurs ou non
+//     return !errors;
+//   });
+
+
+// V1 
 // // empeche le default behaviour du formulaire lors du submit en cas derreur -> il ne refraichit pas la page
 // let formulaire = document.getElementById("formulaire");
 // formulaire.addEventListener("submit", function (e) {
