@@ -14,4 +14,7 @@ Projet n°4 du parcours javascript-React chez OpenClassrooms. L'objectif est de 
 
 - Desktop first puis s’adapte au format responsive
 
+### Présentation du projet
 
+_en cours_
+[Presentation Snappify](https://snappify.com/view/261da17a-d97a-4c83-89cc-fd0d1bada365)
