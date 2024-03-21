@@ -18,4 +18,4 @@ Projet n°4 du parcours javascript-React chez OpenClassrooms. L'objectif est de 
 
 _en cours_
 \
-[Presentation Snappify](https://snappify.com/view/261da17a-d97a-4c83-89cc-fd0d1bada365)
+[Presentation Snappify](https://snappify.com/view/2eabe793-9b04-444c-8041-53034e62100a)
